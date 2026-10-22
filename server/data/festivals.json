@@ -1,0 +1,266 @@
+[
+  {
+    "id": "wacken",
+    "name": "Wacken Open Air",
+    "country": "Germany",
+    "city": "Wacken",
+    "venue": "Wacken, Schleswig-Holstein",
+    "lat": 54.0215,
+    "lon": 9.3752,
+    "startDate": "2027-07-28",
+    "endDate": "2027-07-31",
+    "website": "https://www.wacken.com/en/",
+    "genres": ["Heavy metal", "Power metal", "Thrash metal", "Death metal", "Black metal", "Folk metal", "Metalcore"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://ticketstore.wacken.com/en/wacken-open-air-2027/4-day-tickets",
+      "amount": 364,
+      "currency": "EUR",
+      "label": "4-day ticket (Louder) + EUR 2 fee",
+      "priceUrl": "https://www.wacken.com/en/tickets-shop/ticket-overview-2027/",
+      "priceRegex": "Price:\\s*€\\s*(?<amount>\\d+(?:[.,]\\d{1,2})?)"
+    },
+    "lineup": null,
+    "note": "Line-up is loaded dynamically by the festival site and could not be scraped. See the official bands page."
+  },
+  {
+    "id": "hellfest",
+    "name": "Hellfest",
+    "country": "France",
+    "city": "Clisson",
+    "venue": "Clisson Rock City",
+    "lat": 47.087,
+    "lon": -1.2816,
+    "startDate": "2027-06-17",
+    "endDate": "2027-06-20",
+    "website": "https://www.hellfest.fr/en/",
+    "genres": ["Heavy metal", "Black metal", "Death metal", "Thrash metal", "Hard rock", "Punk", "Metalcore", "Doom metal"],
+    "ticket": {
+      "status": "SoldOut",
+      "url": "https://tickets.hellfest.fr/en/resale.html",
+      "amount": 389,
+      "currency": "EUR",
+      "label": "4-day pass (sold out, official resale open)"
+    },
+    "lineup": null,
+    "note": "The 2027 line-up has not been announced yet."
+  },
+  {
+    "id": "graspop",
+    "name": "Graspop Metal Meeting",
+    "country": "Belgium",
+    "city": "Dessel",
+    "lat": 51.2386,
+    "lon": 5.1096,
+    "website": "https://www.graspop.be/en",
+    "genres": ["Heavy metal", "Hard rock", "Thrash metal", "Death metal", "Metalcore", "Power metal"],
+    "ticket": { "status": "Unknown", "url": "https://www.graspop.be/en" },
+    "lineup": {
+      "url": "https://www.graspop.be/en/line-up/list",
+      "linkSelector": "a.artist__link",
+      "nameSelector": ".artist__name"
+    }
+  },
+  {
+    "id": "bloodstock",
+    "name": "Bloodstock Open Air",
+    "country": "United Kingdom",
+    "city": "Walton-on-Trent",
+    "venue": "Catton Park, Derbyshire",
+    "lat": 52.7316,
+    "lon": -1.7151,
+    "website": "https://www.bloodstock.uk.com/",
+    "genres": ["Heavy metal", "Thrash metal", "Death metal", "Black metal", "Doom metal", "Power metal"],
+    "ticket": { "status": "Unknown", "url": "https://www.bloodstock.uk.com/", "currency": "GBP" },
+    "lineup": {
+      "url": "https://www.bloodstock.uk.com/",
+      "hrefRegex": "/events/boa-2027/bands/[a-z0-9-]+$"
+    }
+  },
+  {
+    "id": "swedenrock",
+    "name": "Sweden Rock Festival",
+    "country": "Sweden",
+    "city": "Sölvesborg",
+    "venue": "Norje",
+    "lat": 56.0576,
+    "lon": 14.6967,
+    "startDate": "2027-06-09",
+    "endDate": "2027-06-12",
+    "website": "https://swedenrock.com/en",
+    "genres": ["Hard rock", "Heavy metal", "Classic rock", "Glam metal"],
+    "ticket": {
+      "status": "NotYetOnSale",
+      "url": "https://www.ticketmaster.se/artist/sweden-rock-festival-biljetter/935374",
+      "amount": 3998,
+      "currency": "SEK",
+      "label": "4-day ticket (general sale opens 23 Oct 2026, 11:00 CEST)",
+      "priceUrl": "https://swedenrock.com/biljetter",
+      "priceRegex": "4-DAY\\s*Festivalpass.*?(?<amount>\\d{4})\\s*kr"
+    },
+    "lineup": {
+      "url": "https://swedenrock.com/line-up",
+      "hrefRegex": "/line-up/[a-z0-9-]+$"
+    }
+  },
+  {
+    "id": "summerbreeze",
+    "name": "Summer Breeze Open Air",
+    "country": "Germany",
+    "city": "Dinkelsbühl",
+    "lat": 49.0705,
+    "lon": 10.318,
+    "website": "https://www.summer-breeze.de/en/",
+    "genres": ["Metalcore", "Melodic death metal", "Black metal", "Folk metal", "Gothic metal", "Power metal"],
+    "ticket": { "status": "Unknown", "url": "https://www.summer-breeze.de/en/tickets/" },
+    "lineup": {
+      "url": "https://www.summer-breeze.de/en/bands/",
+      "hrefRegex": "/en/bands/[a-z0-9-]+-\\d+/?$",
+      "nameStripRegex": "-\\d+$"
+    }
+  },
+  {
+    "id": "partysan",
+    "name": "Party.San Metal Open Air",
+    "country": "Germany",
+    "city": "Schlotheim",
+    "venue": "Flugplatz Obermehler",
+    "lat": 51.243,
+    "lon": 10.634,
+    "startDate": "2027-08-05",
+    "endDate": "2027-08-07",
+    "website": "https://www.party-san.de/",
+    "genres": ["Death metal", "Black metal", "Thrash metal", "Grindcore", "Extreme metal"],
+    "ticket": { "status": "OnSale", "url": "https://www.cudgel.de/produkt-kategorie/tickets/" },
+    "lineup": {
+      "url": "https://www.party-san.de/bands-2027",
+      "hrefRegex": "/banddetail/2027-",
+      "nameStripRegex": "^2027-"
+    }
+  },
+  {
+    "id": "brutalassault",
+    "name": "Brutal Assault",
+    "country": "Czech Republic",
+    "city": "Jaroměř",
+    "venue": "Josefov Fortress",
+    "lat": 50.335,
+    "lon": 15.921,
+    "website": "https://brutalassault.cz/en",
+    "genres": ["Death metal", "Black metal", "Grindcore", "Doom metal", "Thrash metal", "Extreme metal"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://brutalassault.cz/en/tc-69/tickets",
+      "amount": 229.9,
+      "currency": "EUR",
+      "label": "Festival pass (second edition)",
+      "priceUrl": "https://brutalassault.cz/en/tc-69/tickets",
+      "priceRegex": "BRUTAL ASSAULT 2027 festival pass \\[e-ticket\\][^€]{0,200}€\\s*(?<amount>\\d+(?:\\.\\d{1,2})?)"
+    },
+    "lineup": {
+      "url": "https://brutalassault.cz/en/line-up",
+      "linkSelector": "a.lineup_band_link",
+      "nameSelector": ".band_lineup_title",
+      "genreSelector": ".band_lineup_genre"
+    }
+  },
+  {
+    "id": "copenhell",
+    "name": "Copenhell",
+    "country": "Denmark",
+    "city": "Copenhagen",
+    "venue": "Refshaleøen",
+    "lat": 55.69,
+    "lon": 12.615,
+    "startDate": "2027-06-23",
+    "endDate": "2027-06-26",
+    "website": "https://copenhell.dk/en/",
+    "genres": ["Heavy metal", "Thrash metal", "Death metal", "Black metal", "Hard rock"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://www.ticketmaster.dk/event/1010238744?language=da-dk&brand=copenhelldk",
+      "currency": "DKK",
+      "label": "4-day ticket"
+    },
+    "lineup": {
+      "url": "https://copenhell.dk/en/program/",
+      "linkSelector": "a[href*='/artist/']",
+      "nameSelector": "h3"
+    }
+  },
+  {
+    "id": "roadburn",
+    "name": "Roadburn Festival",
+    "country": "Netherlands",
+    "city": "Tilburg",
+    "venue": "013 and Cul de Sac",
+    "lat": 51.5594,
+    "lon": 5.0891,
+    "startDate": "2027-04-15",
+    "endDate": "2027-04-18",
+    "website": "https://roadburn.com/",
+    "genres": ["Doom metal", "Stoner rock", "Post-metal", "Psychedelic", "Sludge", "Black metal", "Avant-garde"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://roadburn.com/tickets/",
+      "amount": 295,
+      "currency": "EUR",
+      "label": "4-day ticket",
+      "priceUrl": "https://roadburn.com/tickets/",
+      "priceRegex": "4-Day Ticket\\s*€\\s*(?<amount>\\d+(?:[.,]\\d{1,2})?)"
+    },
+    "lineup": {
+      "url": "https://roadburn.com/line-up/?unfilter=1",
+      "linkSelector": "a[href*='/band/']",
+      "nameSelector": "h3.t-entry-title",
+      "nameStripRegex": "\\s+performing\\s+.*$"
+    }
+  },
+  {
+    "id": "inferno",
+    "name": "Inferno Metal Festival",
+    "country": "Norway",
+    "city": "Oslo",
+    "lat": 59.9139,
+    "lon": 10.7522,
+    "startDate": "2027-03-25",
+    "endDate": "2027-03-28",
+    "website": "https://infernofestival.no/",
+    "genres": ["Black metal", "Death metal", "Extreme metal"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://www.ticketmaster.no/event/inferno-metal-festival-2027-pass-billetter/1169822446?language=en-us",
+      "amount": 4495,
+      "currency": "NOK",
+      "label": "4-day festival pass",
+      "priceUrl": "https://infernofestival.no/",
+      "priceRegex": "2027 - 4 Day Festival Pass.*?(?<amount>\\d{4}),-"
+    },
+    "lineup": {
+      "url": "https://infernofestival.no/artists",
+      "hrefRegex": "/artists/[a-z0-9-]+$"
+    }
+  },
+  {
+    "id": "dynamo",
+    "name": "Dynamo Metalfest",
+    "country": "Netherlands",
+    "city": "Eindhoven",
+    "lat": 51.4416,
+    "lon": 5.4697,
+    "startDate": "2027-08-13",
+    "endDate": "2027-08-15",
+    "website": "https://dynamo-metalfest.nl/",
+    "genres": ["Metalcore", "Thrash metal", "Heavy metal", "Hard rock", "Alternative metal"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://tickets.dynamo-metalfest.nl/fe23f62bbb6b42db88d18411cc4ecd67",
+      "currency": "EUR",
+      "label": "Festival ticket (early bird)"
+    },
+    "lineup": {
+      "url": "https://dynamo-metalfest.nl/line-up/",
+      "hrefRegex": "/bands/[a-z0-9-]+/?$"
+    }
+  }
+]
