@@ -39,6 +39,7 @@ public sealed class LineupSource
     public string? LinkSelector { get; init; }
     public string? HrefRegex { get; init; }
     public string? NameSelector { get; init; }
+    public string? NameElementSelector { get; init; }
     public string? GenreSelector { get; init; }
     public string? NameStripRegex { get; init; }
 }

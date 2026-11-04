@@ -262,5 +262,76 @@
       "url": "https://dynamo-metalfest.nl/line-up/",
       "hrefRegex": "/bands/[a-z0-9-]+/?$"
     }
+  },
+  {
+    "id": "rockamring",
+    "name": "Rock am Ring",
+    "country": "Germany",
+    "city": "Nürburg",
+    "venue": "Nürburgring",
+    "lat": 50.3356,
+    "lon": 6.9475,
+    "startDate": "2027-06-04",
+    "endDate": "2027-06-06",
+    "website": "https://www.rock-am-ring.com/en",
+    "genres": ["Alternative metal", "Metalcore", "Hard rock", "Heavy metal", "Punk rock"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://www.eventim.de/noapp/event/21719550/?affiliate=RRI&utm_source=RRI&utm_medium=dp&utm_campaign=eventimpresents",
+      "currency": "EUR",
+      "label": "3-day festival ticket; price shown at checkout"
+    },
+    "lineup": {
+      "url": "https://www.rock-am-ring.com/en/line-up",
+      "hrefRegex": "/en/line-up/[a-z0-9-]+$"
+    }
+  },
+  {
+    "id": "rockimpark",
+    "name": "Rock im Park",
+    "country": "Germany",
+    "city": "Nuremberg",
+    "venue": "Zeppelinfeld",
+    "lat": 49.425,
+    "lon": 11.119,
+    "startDate": "2027-06-04",
+    "endDate": "2027-06-06",
+    "website": "https://www.rock-im-park.com/en",
+    "genres": ["Alternative metal", "Metalcore", "Hard rock", "Heavy metal", "Punk rock"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://www.eventim.de/noapp/event/21683298/?affiliate=ROP&utm_source=ROP&utm_medium=dp&utm_campaign=eventimpresents",
+      "currency": "EUR",
+      "label": "3-day festival ticket with general camping; price shown at checkout"
+    },
+    "lineup": {
+      "url": "https://www.rock-im-park.com/en/line-up",
+      "hrefRegex": "/en/line-up/[a-z0-9-]+$"
+    }
+  },
+  {
+    "id": "rockstadt",
+    "name": "Rockstadt Festival",
+    "country": "Romania",
+    "city": "Ghimbav",
+    "venue": "Rockstadt Fest, Ghimbav (Brașov)",
+    "lat": 45.666,
+    "lon": 25.50,
+    "startDate": "2027-07-26",
+    "endDate": "2027-07-30",
+    "website": "https://rockstadtextremefest.ro/",
+    "genres": ["Heavy metal", "Death metal", "Black metal", "Thrash metal", "Metalcore", "Extreme metal"],
+    "ticket": {
+      "status": "OnSale",
+      "url": "https://bilete.rockstadtextremefest.ro/bilete-rockstadt-fest-2027-129242/",
+      "amount": 848.4,
+      "currency": "RON",
+      "label": "General admission pass"
+    },
+    "lineup": {
+      "url": "https://bilete.rockstadtextremefest.ro/bilete-rockstadt-fest-2027-129242/",
+      "nameElementSelector": "#artist h3"
+    },
+    "note": "The festival was renamed Rockstadt Festival for 2027. The ticket page currently lists four artist profiles; more names may be announced."
   }
 ]

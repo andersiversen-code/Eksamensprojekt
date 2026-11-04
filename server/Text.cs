@@ -51,6 +51,7 @@ public static class Text
     private static readonly Dictionary<string, decimal> EurRates = new()
     {
         ["EUR"] = 1m, ["SEK"] = 0.091m, ["NOK"] = 0.086m, ["DKK"] = 0.134m, ["GBP"] = 1.16m, ["CZK"] = 0.041m,
+        ["RON"] = 0.20m,
     };
 
     // Approximate, fixed rates: only meant for side-by-side comparison.

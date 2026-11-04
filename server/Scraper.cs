@@ -61,16 +61,26 @@ public static class Scraper
             : new Regex(src.NameStripRegex, RegexOptions.IgnoreCase, TimeSpan.FromSeconds(1));
 
         var bands = new Dictionary<string, ScrapedBand>();
-        foreach (var a in doc.QuerySelectorAll(src.LinkSelector ?? "a[href]"))
+        var elements = src.NameElementSelector is null
+            ? doc.QuerySelectorAll(src.LinkSelector ?? "a[href]")
+            : doc.QuerySelectorAll(src.NameElementSelector);
+
+        foreach (var element in elements)
         {
-            var href = a.GetAttribute("href");
-            if (string.IsNullOrWhiteSpace(href) || (hrefRe is not null && !hrefRe.IsMatch(href))) continue;
+            var href = element.GetAttribute("href");
+            if (src.NameElementSelector is null &&
+                (string.IsNullOrWhiteSpace(href) || (hrefRe is not null && !hrefRe.IsMatch(href)))) continue;
 
             string name;
             bool fromText;
-            if (src.NameSelector is not null)
+            if (src.NameElementSelector is not null)
             {
-                var raw = a.QuerySelector(src.NameSelector)?.TextContent;
+                name = Text.CleanText(element.TextContent);
+                fromText = true;
+            }
+            else if (src.NameSelector is not null)
+            {
+                var raw = element.QuerySelector(src.NameSelector)?.TextContent;
                 if (string.IsNullOrWhiteSpace(raw)) continue;
                 name = Text.CleanText(raw);
                 fromText = true;
@@ -90,7 +100,7 @@ public static class Scraper
             var key = Text.Key(name);
             if (key.Length == 0 || bands.ContainsKey(key)) continue;
 
-            var genre = src.GenreSelector is null ? null : a.QuerySelector(src.GenreSelector)?.TextContent;
+            var genre = src.GenreSelector is null ? null : element.QuerySelector(src.GenreSelector)?.TextContent;
             genre = string.IsNullOrWhiteSpace(genre) ? null : Text.CleanText(genre);
             bands[key] = new ScrapedBand { Name = name, Genre = genre, FromText = fromText };
         }
