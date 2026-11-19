@@ -1,0 +1,6 @@
+node_modules
+dist
+server/wwwroot
+server/bin
+server/obj
+server/data/scrape-cache.json
